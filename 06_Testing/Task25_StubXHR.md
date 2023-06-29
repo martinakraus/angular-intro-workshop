@@ -1,6 +1,6 @@
 ### Task
 
-1. Open _cypress/integration/books.spec.ts_
+1. Open _cypress/e2e/books.cy.ts_
 2. Place mocked books inside _cypress/fixtures/books.json_
 3. Instrument mocked books to create a stubbed XHR-Request handled by cypress
 4. Write a test in the newly generated spec file, ensuring that the stubbed response is used as expected

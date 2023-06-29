@@ -4,7 +4,7 @@ As a user I want to check if a book can be created.
 
 ### Task
 
-1. Open _cypress/integration/books.spec.ts_
+1. Open _cypress/e2e/books.cy.ts_
 2. Set up a test
     - click the create button
     - fill in the books formula
