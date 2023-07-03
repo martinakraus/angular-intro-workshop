@@ -2,7 +2,7 @@
 
 ## Material
 
-- [Workshop-Slides]([https://docs.google.com/presentation/d/1C7nJqiBHu0rUaDGxAGTXSNWDEUo7hFLh3Dtn0Xcu8PM/edit?usp=sharing](https://docs.google.com/presentation/d/1WWniIhJ940Xd0D5MG_KsnAmS3GYj3-oYGPmzrfaE5c8/edit?usp=sharing)
+- [Workshop-Slides](https://docs.google.com/presentation/d/1WWniIhJ940Xd0D5MG_KsnAmS3GYj3-oYGPmzrfaE5c8/edit?usp=sharing)
 
 - [Angular Checklist](https://angular-checklist.io/default/checklist/architecture)
 
