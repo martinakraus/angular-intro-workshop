@@ -9,3 +9,21 @@
 - Open _book.module.ts_.
 - Update the `StoreModule.forFeature`-declaration to use `bookReducer`, replacing the inline configuration for reducers.
 
+## Hints
+
+```typescript
+// book.feature.ts
+export const bookFeatureName = 'book';
+...
+export interface BookState {
+  bookCollection: BookCollectionSlice;
+}
+
+export const bookReducers: ActionReducerMap<BookState> = {
+  bookCollection: bookCollectionReducer
+};
+
+export const bookFeature = createFeatureSelector<BookState>(bookFeatureName);
+```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-selectors-with-params...solve--ngrx-type-feature-state)

@@ -28,3 +28,5 @@ __Select data__
 ```ts
 this.store.select(state => state.<feature name>.<slice>.<data>)
 ```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-reducer...solve--ngrx-store-selection)

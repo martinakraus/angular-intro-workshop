@@ -13,23 +13,24 @@ Whenever you run Cypress for the first time,
 the app will prompt you to set up either E2E Testing or Component Testing. 
 Click on "E2E Testing" to start the configuration wizard.
 
-# Run cypress
+- You need to manually configure your `tsconfig.json`-File as follows:
 
-```bash
-# start cypress app
-# add initial directories for cypress
-npx cypress open
+```typescript
+//cypress/tsconfig.json
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress"]
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
+
 ```
 
-// cypress/tsconfig.json
-{
-"compilerOptions": {
-"strict": true,
-"target": "es5",
-"lib": ["es5", "dom"],
-"types": ["cypress"]
-},
-"include": [
-"**/*.ts"
-]
-}
+
+
+[Solution](https://github.com/martinakraus/angular-advanced-workshop/commit/342e8baa8f67f775d7ac0de5c5aa8745b26c607f)

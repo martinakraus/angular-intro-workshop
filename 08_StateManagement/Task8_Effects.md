@@ -32,6 +32,7 @@ export const loadBooksComplete = createAction('[Book] Load Books Completed', pro
 ```
 
 
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-type-feature-state...solve--ngrx-introduce-effects)
 
 
 

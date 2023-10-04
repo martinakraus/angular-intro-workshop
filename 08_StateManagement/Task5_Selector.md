@@ -20,3 +20,5 @@ createFeatureSelector<{ bookCollection: BookCollectionSlice }>(bookFeatureName);
 
 createSelector();
 ```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-store-selection...solve--ngrx-use-selectors)

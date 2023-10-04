@@ -2,6 +2,7 @@
 
 - Install @ngrx/store with	`ng add @ngrx/store`.
 - Install @ngrx/store-devtools with `ng add @ngrx/store-devtools`.
+- Install NgRx schematic: `ng add @ngrx/schematics`
 
 - Open _app.module.ts_ and have a look on the modules automatically set up for you.
 

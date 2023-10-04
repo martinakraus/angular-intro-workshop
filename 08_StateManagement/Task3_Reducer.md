@@ -39,3 +39,5 @@ export  const bookCollectionReducer = createReducer(/* ... */)
 // book.module.ts
 StoreModule.forFeature(bookFeatureName, { bookCollection: bookCollectionReducer })
 ```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-dispatch-action...solve--ngrx-use-reducer)

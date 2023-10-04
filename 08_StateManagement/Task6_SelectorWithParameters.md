@@ -8,6 +8,8 @@
 - Update initialization of `book$` by selecting the book from the store instead of using `BookApiService`.
 - Use the selector `bookByIsbn`
 
+> _This task has a bonus part_
+> 
 ## Hints
 
 ```ts
@@ -18,3 +20,10 @@ export const bookByIsbn = (isbn: string) =>
 // fragment from book-details.component.ts
 switchMap(params => this.store.select(bookByIsbn(params.isbn)))
 ```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-selectors...solve--ngrx-use-selectors-with-params)
+
+
+## Bonus
+
+- Use the selector `bookByIsbn` in _book-edit.component.ts_, too.

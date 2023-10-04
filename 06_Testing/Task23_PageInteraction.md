@@ -11,6 +11,7 @@ As a user I want to check if a book can be created.
     - save the new book
     - navigate back to the start page
     - assert that one more book is in the list as before
+    - Check for the `data-test`-Attributes inside the `BookNewComponent` to select the inputs
 
 ## Hints
 
@@ -41,3 +42,5 @@ beforeEach(() => {
 ```typescript
 const randomISBN = Math.floor(1000000000000 + Math.random() * 900000);
 ```
+
+[Solution](https://github.com/martinakraus/angular-advanced-workshop/commit/83cad8eba2e0bfe2ac908a7f3ddcc6fd7ae821a2)

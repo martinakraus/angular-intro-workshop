@@ -11,6 +11,8 @@
 - Make sure that the dispatched action appears in the action log.
 - Take some time to have a look what features the DevTools have.
 
+* This task also has a bonus part.
+
 ## Hints
 
 ```ts
@@ -18,4 +20,27 @@
 import { Store } from '@ngrx/store';
 
 this.store.dispatch(createBookStart());
+```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-store-setup...solve--ngrx-dispatch-action)
+
+
+## Bonus
+
+__Replace relative import paths with path-alias__
+
+- Create a barrel file (index.ts) inside _store/book_
+- Make the barrel file export _book-collection.actions.ts_
+- Open the root-_tsconfig.json_
+- Add the path alias __@store/book__ that points to _./src/app/book/store/index_
+- Update the import-path of createBookStart to use __@store/book__ instead of the relative path.
+
+```json
+"paths": {
+  "@store/book": ["./src/app/book/store/index"]
+}
+```
+
+```ts
+import { createBookStart } from '@store/book';
 ```

@@ -14,3 +14,4 @@
 
 > _Notice that each component that is fully migrated has only one dependency, the Store._
 
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-effects-everywhere...solve--ngrx-use-router-store)

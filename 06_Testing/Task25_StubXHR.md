@@ -43,3 +43,5 @@ cy.visit();
   }
 ]
 ```
+
+[Solution](https://github.com/martinakraus/angular-advanced-workshop/commit/d6a73283f8da7f2eae6493b6c8e1ffb6199184b8)
