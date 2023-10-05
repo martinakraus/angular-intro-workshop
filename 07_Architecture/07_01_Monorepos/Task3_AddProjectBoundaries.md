@@ -8,7 +8,7 @@
 'scope:my-first-app'
 'scope:my-second-app'
 ```
-- Open the `nx.json` and insert restrictions as follows:
+- Open the `.eslintrc.json` and insert restrictions as follows:
 
 ```
 1. The UI Library is only allowed to import code from itself
