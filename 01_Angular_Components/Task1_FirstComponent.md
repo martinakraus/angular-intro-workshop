@@ -1,3 +1,5 @@
+# Write your first Component
+
 - Open a second terminal.
 - Switch to the directory where your Angular project is located.
 - Create a new component by executing the following command `ng generate component book-card`.
@@ -29,4 +31,4 @@
 - Check [localhost:4200](http://localhost:4200).
 
 
-[Solution](https://stackblitz.com/github/workshops-de/angular-workshop/tree/solve--your-1st-component)
+[Solution](https://github.com/martinakraus/bookmonkey-client/commit/543d938b1c47c34f8e64f68565f9550e9dba203d)

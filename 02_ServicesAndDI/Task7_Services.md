@@ -10,12 +10,12 @@ s# Create a BookApiService
 #### Generate with ng-cli:
 
 ```
-ng generate service books/book-api
+ng generate service book/book-api
 ```
 
 ```
 // book.component.ts
-constructor(private bookData: BookApiService){}
+constructor(private readonly bookApiService: BookApiService){}
 ```
 
-[Solution](https://stackblitz.com/github/workshops-de/angular-workshop/tree/solve--create-a-BookApi-service)
+[Solution](https://github.com/martinakraus/bookmonkey-client/commit/e485590f235750b57a4add8d093815c588e537eb)

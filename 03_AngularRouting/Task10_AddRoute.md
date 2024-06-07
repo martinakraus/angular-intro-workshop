@@ -29,13 +29,12 @@
 </nav>
 ```
 
-**Book Routes:**
-```
-import { RouterModule } from '@angular/router';
-```
+**App Routes:**
 
 ```ts
 // app-routing.module.ts
+import { RouterModule } from '@angular/router';
+
 const routes: Routes = [
   {
     path: '',
@@ -64,7 +63,8 @@ const routes: Routes = [
 **Router outlet:**
 
 ```html
+<!--app.component.html-->
 <router-outlet></router-outlet>
 ```
 
-[Solution](https://stackblitz.com/github/workshops-de/angular-workshop/tree/solve--add-basic-routing)
+[Solution](https://github.com/martinakraus/bookmonkey-client/commit/c46ac75534c32e1e6a6757cf896ee02829af6bed)

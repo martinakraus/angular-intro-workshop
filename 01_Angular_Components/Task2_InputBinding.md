@@ -11,6 +11,19 @@ Now, it is time to feed our component with data using an `@Input`-Binding.
 - Switch to the template of _AppComponent_.
 - Bind the property `book` to the component `book-card` using its `@Input`-binding **[content]**.
 
+## Make the Input binding type-safe:
+
+- Create an _Interface_ called `Book`.
+- Execute following command to create the interface: `ng generate interface book`.
+- Open _src/app/book.ts_.
+- Specify the following properties: _title_, _abstract_, _author_ all as `string`.
+- Switch to the _AppComponent_.
+- Annotate the property book with the interface `Book`.
+- You might need to import `Book` from _'./book'_ if your editor misses to import the type automatically.
+- Switch to the _BookCardComponent_.
+- Annotate the `@Input` property content with the interface `Book`.
+- Recognize that you now have auto-completion in both TypeScript- & Template-Files.
+
 ## Hints
 
 ```ts
@@ -32,4 +45,4 @@ export class AppComponent {
 
 }
 
-[Solution](https://stackblitz.com/github/workshops-de/angular-workshop/tree/solve--apply-an-input-binding)
+[Solution](https://github.com/martinakraus/bookmonkey-client/commit/dfd7dc8b976fb0fed58e01a86bb7d14da13d76e8)
