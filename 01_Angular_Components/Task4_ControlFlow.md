@@ -3,7 +3,7 @@
 1. Create an array with sample books in your `AppComponent` component
 2. In order to use the new Built-in Control Flow Syntax we need to add an isbn property to the current book model
 3. Iterate over books with `@for`
-4. Use `*@if` to render the List of `BookCardComponents` just if `books` is defined
+4. Use `@if` to render the List of `BookCardComponents` just if `books` is defined
 
 Bonus:
 1. Add an `@empty`-Block
