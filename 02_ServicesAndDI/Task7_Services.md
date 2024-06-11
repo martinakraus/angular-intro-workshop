@@ -1,4 +1,4 @@
-s# Create a BookApiService
+# Create a BookApiService
 - Create a service handling Book-API operations 
 - Execute the following Angular CLI command: `ng generate service book/book-api`.
 - Implement the method `getAll()` that yields an array of Books.
