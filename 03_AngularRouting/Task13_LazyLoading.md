@@ -6,7 +6,6 @@
 - Don't forget to import the `BookRoutingModule` into the `BookModule`
 
 - Restart your `ng serve` since it has new starting points to compile
-- Make sure your `BooksComponent`-View holds a `<router-outlet></router-outlet>`
 
 ## Hints
 
