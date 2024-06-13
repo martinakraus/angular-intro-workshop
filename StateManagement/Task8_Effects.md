@@ -31,6 +31,26 @@ export const loadBooksStart = createAction('[Book] Load Books Started');
 export const loadBooksComplete = createAction('[Book] Load Books Completed', props<{ books: Book[] }>());
 ```
 
+```
+//book-collections.effects.ts
+@Injectable()
+export class BookCollectionEffects{
+  constructor(
+    private readonly actions$: Actions,
+    private readonly bookApi: BookApiService
+  ) {}
+
+
+  load = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(loadBooksStart),
+      exhaustMap(() => this.bookApi.getAll()),
+      map(books => loadBooksComplete({books}))
+    )
+  })
+}
+```
+
 
 [Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-type-feature-state...solve--ngrx-introduce-effects)
 
