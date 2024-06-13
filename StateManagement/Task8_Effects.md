@@ -31,7 +31,7 @@ export const loadBooksStart = createAction('[Book] Load Books Started');
 export const loadBooksComplete = createAction('[Book] Load Books Completed', props<{ books: Book[] }>());
 ```
 
-```
+```typescript
 //book-collections.effects.ts
 @Injectable()
 export class BookCollectionEffects{
@@ -50,6 +50,7 @@ export class BookCollectionEffects{
   })
 }
 ```
+
 
 
 [Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-type-feature-state...solve--ngrx-introduce-effects)
