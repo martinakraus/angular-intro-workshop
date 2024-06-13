@@ -1,4 +1,4 @@
-### Router Store
+## Router Store
 
 - Install the RouterStore by executing `ng add @ngrx/router-store`
 - Register the RouterStore's reducer in _app.module.ts_: `StoreModule.forRoot({ router: routerReducer }, { /* ... */ })`
@@ -14,4 +14,44 @@
 
 > _Notice that each component that is fully migrated has only one dependency, the Store._
 
-[Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-effects-everywhere...solve--ngrx-use-router-store)
+## Hints
+
+```typescript
+app/store/router/router.selectors.ts
+
+import { getRouterSelectors } from '@ngrx/router-store';
+
+// `router` is used as the default feature name. You can use the feature name
+// of your choice by creating a feature selector and pass it to the `getRouterSelectors` function
+// export const selectRouter = createFeatureSelector<RouterReducerState>('yourFeatureName');
+
+export const {
+  selectCurrentRoute, // select the current route
+  selectFragment, // select the current route fragment
+  selectQueryParams, // select the current route query params
+  selectQueryParam, // factory function to select a query param
+  selectRouteParams, // select the current route params
+  selectRouteParam, // factory function to select a route param
+  selectRouteData, // select the current route data
+  selectRouteDataParam, // factory function to select a route data param
+  selectUrl, // select the current url
+  selectTitle // select the title if available
+} = getRouterSelectors();
+```
+```typescript
+export const selectBookByIsbn = createSelector(
+  selectRouteParam('isbn'),
+  selectBookCollection,
+  (isbn, books) => books.find(book => book.isbn === isbn)
+)
+```
+
+
+```typescript
+//book-detail.component.ts
+    this.book$ = this.store.select(selectBookByIsbn).pipe(
+      filter((book): book is Book => !!book)
+    )
+```
+
+[Solution](https://github.com/workshops-de/angular-advanced-workshop/commit/bef798befea50bb0db54b6cb1336a644dcce93e0)
