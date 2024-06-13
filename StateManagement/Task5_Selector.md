@@ -6,7 +6,7 @@
 - Import the feature selector from _book.feature.ts_
 - Create a selector providing the books of the store slice.
 - Open the file _book/book-list.component.ts_
-- Use the selector you have created instead of the inline projection function
+- Use the selector you have created instead of the inline projection function (`this.books$ = this.store.select(selectBookCollection);`)
 
 - Create a new book.
 - After navigating back to the book list you should see the created book selected from the store.
