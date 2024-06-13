@@ -18,7 +18,7 @@ export const bookByIsbn = (isbn: string) =>
   createSelector(<reuse the selector you have written to select the books>, books => books.find(book => book.isbn === isbn));
 
 // fragment from book-details.component.ts
-switchMap(params => this.store.select(bookByIsbn(params.isbn)))
+this.book$ = this.store.select(selectBookByIsbn(isbn)).pipe(filter((book): book is Book => !!book));
 ```
 
 [Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-use-selectors...solve--ngrx-use-selectors-with-params)
