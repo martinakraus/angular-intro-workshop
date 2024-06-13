@@ -14,11 +14,24 @@
 ## Hints
 
 ```ts
-import { createFeatureSelector, createSelector } from '@ngrx/store';
+// book-collection.selectors.ts
+import { createSelector } from '@ngrx/store';
+import { selectBookFeature } from './book.feature';
 
-createFeatureSelector<{ bookCollection: BookCollectionSlice }>(bookFeatureName);
+const selectBookCollectionSlice = createSelector(selectBookFeature, feature => feature.bookCollection);
 
-createSelector();
+export const selectBookCollection = createSelector(selectBookCollectionSlice, slice => slice.entities);
+
+
+// store/book.feature.ts
+import { createFeatureSelector } from '@ngrx/store';
+import { BookCollectionSlice } from './book-collection.slice';
+
+
+export const bookFeatureName = 'book';
+
+
+export const selectBookFeature = createFeatureSelector<{ bookCollection: BookCollectionSlice }>(bookFeatureName);
 ```
 
 [Solution](https://github.com/workshops-de/angular-advanced-workshop/compare/solve--ngrx-store-selection...solve--ngrx-use-selectors)
